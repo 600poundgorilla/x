@@ -1,0 +1,10 @@
+import pandas as pd 
+xx = pd.read_csv('precious_metal.csv',sep=';') 
+print(xx)
+print(xx.info())
+xx.set_axis(['gold','silver','platinum','palladium','date'],axis='columns',inplace=True)
+print(xx.info())
+xx.isnull().sum()
+print(xx)
+xx.fillna(0)
+print(xx)

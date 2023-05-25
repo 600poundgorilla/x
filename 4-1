@@ -1,0 +1,4 @@
+import pandas as pd 
+xx = pd.read_csv('precious_metal.csv',sep=';') 
+print(xx)
+print(xx.info())

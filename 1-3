@@ -1,0 +1,23 @@
+import numpy as np
+a = np.array([[4, 2], [9, 1]])
+b = np.array([[5, 3], [2, 5]]) 
+zx = np.vstack((a, b))
+print(zx)
+cut = zx[:-1,0]
+print(cut)
+mx = cut.max()
+print(mx)
+mn = cut.min()
+print(mn)
+sm = cut.sum()
+print(sm)
+zxc = np.hstack((a, b))
+print(zxc)
+cut1 = zxc[0,:-1]
+print(cut1)
+mx1 = cut1.max()
+print(mx1)
+mn1 = cut1.min()
+print(mn1)
+sm1 = cut1.sum()
+print(sm1)

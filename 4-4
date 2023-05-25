@@ -1,0 +1,11 @@
+import pandas as pd 
+xx = pd.read_csv('precious_metal.csv',sep=';') 
+xx.set_axis(['gold','silver','platinum','palladium','date'],axis='columns',inplace=True)
+xx.isnull().sum()
+xx.fillna(0)
+print(xx)
+xx['gold'] = xx['gold'].apply(lambda x:float(str(x).replace(',','.'))) 
+xx['silver'] = xx['silver'].apply(lambda x:float(str(x).replace(',','.'))) 
+xx['platinum'] = xx['platinum'].apply(lambda x: loat(str(x).replace(',','.'))) 
+xx['palladium'] = xx['palladium'].apply(lambda x:float(str(x).replace(',','.'))) 
+print(xx)
